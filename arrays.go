@@ -54,6 +54,12 @@ func createMatrix(rows, cols int) [][]int  {
 			row := append(row, i * j)
 		}
 		matrix := append(matrix, row)
-	}
+	} 
 	return matrix
+}
+
+// syntantic sugar
+fruits := []string{"apple", "banana", "grape"}
+for i, fruits := range fruits{
+	fmt.Println(i, fruits)
 }
