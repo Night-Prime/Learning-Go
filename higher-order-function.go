@@ -19,3 +19,10 @@ func main() {
 	fmt.Println(aggregate(2,3,6, add))
 	fmt.Println(aggregate(2,2,4, mul))
 }
+
+// function currying can act as a middleware function
+func getLogger(formatter func(string, string) string) func(string, string) {
+	return func(a string, b string) {
+		fmt.Println(formatter(a, b))
+	}
+}
