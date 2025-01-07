@@ -35,4 +35,5 @@ func filterOldEmails(emails []email) {
 	fmt.Println("email 2 is Old: ", isOld)
 	isOld = <- isOldChan
 	fmt.Println("email 3 is Old: ", isOld)
+	close(ch)
 }
