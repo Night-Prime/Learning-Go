@@ -141,7 +141,7 @@ func(list *LinkedList) findNodeAtIndex(index int) *Node {
 	for count = 1; count < index; count++ {
 		currentVal = currentVal.next
 	}
-	fmt.Printf("The Node at %d is %d \n", index, currentVal)
+	fmt.Printf("The Node at %d is %d \n", index, currentVal.data)
 	return currentVal
 }
 
