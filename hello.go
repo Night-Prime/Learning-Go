@@ -2,14 +2,15 @@ package main
 
 import "fmt" 
 
-/*
-My first Golang program.
-
-This program serves as a simple introduction to the Go programming language.
-It demonstrates the basic structure of a Go program, including the main function
-and how to print output to the console.
-*/
-
 func main() {
-	fmt.Println("Hello Dhaniel"); 
+	var initialVar string = "Dhaniel"
+	const rigidVar string = "constants"
+
+	initialVar = "flexible"
+	// this is valid and would change
+
+	rigidVar = "not-flexible"
+	// this is not valid as it unable to be reassigned.
+
+	fmt.Println(initialVar, rigidVar); 
 }  
