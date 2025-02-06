@@ -65,7 +65,7 @@ func (list *LinkedList) printLinkedList() {
 	currentVal := list.head
 	// iterate through list and print current value
 	for currentVal != nil{
-		fmt.Printf("%d -> \n", currentVal.data)
+		fmt.Printf("%d -> ", currentVal.data)
 		currentVal = currentVal.next 
 	}
 	fmt.Println()
@@ -93,7 +93,7 @@ func (list *LinkedList) deleteAtEnd() {
 		fmt.Println("Empty Linked List")
 		return
 	}
-	// if the it's only a value in the linkedList
+	// if it's only a value in the linkedList
 	if list.head.next == nil{
 		list.head = nil
 		fmt.Println("Only one Value in this Linked List")
