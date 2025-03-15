@@ -28,7 +28,8 @@ func lengthOfSubstringWithoutRepeatingCharacter (s string) int{
 	for right:= 0; right < len(s); right++ {
 		char := s[right]
 		fmt.Printf("First character index: %c \n", char);
-		// when the charcter already exists in the map
+
+		// when the charcter already exists in the map, exclude it:
 		if idx, exists := lastSeen[char]; exists && idx >= left {
 			left = idx + 1 // move pointer to exclude repeated character
 			fmt.Printf("Next Pointer Index: @%v \n", left);
